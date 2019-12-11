@@ -171,7 +171,7 @@ public class Converter {
         }
         int nNum = num %( 1000*range);
         int counter = 0;
-        while (nNum - (++counter) * 100*range > 100*range) ;
+        while (nNum - (++counter) * 100 >= 100) ;
         if (counter == 4)
         {
             return dict.get(100).toString()+dict.get(500).toString()+"";
@@ -195,7 +195,7 @@ public class Converter {
         else
         {
             String s = new String(""+dict.get(500));
-            if(counter-4<=0){
+            if(counter-5<=0){
                 return s;
             }
             String substr=new String(""+dict.get(100));
@@ -214,7 +214,7 @@ public class Converter {
         }
         int nNum = num % (100*range);
         int counter = 0;
-        while (nNum - (++counter) * 10*range > 10*range) ;
+        while (nNum - (++counter) * 10 >= 10) ;
         if (counter == 4)
         {
             return dict.get(10).toString()+dict.get(50).toString()+"";
@@ -238,7 +238,7 @@ public class Converter {
         else
         {
             String s = new String(""+dict.get(50));
-            if(counter-4<=0){
+            if(counter-5<=0){
                 return s;
             }
             String substr=new String(""+dict.get(10));
@@ -280,7 +280,7 @@ public class Converter {
         else
         {
             String s = new String(""+dict.get(5));
-            if(nNum-4<=0){
+            if(nNum-5<=0){
                 return s;
             }
             String substr=new String(""+dict.get(1));
